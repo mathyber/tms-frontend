@@ -1,0 +1,24 @@
+.login {
+  font-family: Arial, serif;
+  display: flex;
+  justify-content: center;
+}
+
+.text {
+  color: dimgrey;
+  padding-right: 5%;
+}
+
+.login_form{
+  display: flex;
+  flex-direction: column;
+
+  input{
+    margin: 5px;
+    width: 200px;
+    padding: 5px;
+  }
+  button {
+    width: 100px;
+  }
+}
