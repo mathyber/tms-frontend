@@ -5,19 +5,20 @@ import axios from "axios";
 class LoginForm extends Component {
 
     state = {
-        login: null,
-        password: null,
-        language: null,
-        token: null
+        login: undefined,
+        password: undefined,
+        language: undefined,
+        token: undefined
     }
 
-    onChange(e) {
-        this.setState({
-            [e.target.name]: e.target.value
-        })
-    }
+ //   handleChange = (e) => {
+  //      this.setState(prev => ({
+ //           ...prev,
+  //          [e.target.name]: e.target.value
+  //      }))
+  //  }
 
-    getToken = (e) => {
+    handleSubmit = (e) => {
         e.preventDefault();
         const login = e.target.elements.login.value;
         const password = e.target.elements.password.value;
@@ -47,7 +48,7 @@ class LoginForm extends Component {
                     <div> TMS для компании Beiersdorf</div>
                 </div>
 
-                <form className="login_form" onSubmit={this.getToken}>
+                <form className="login_form" onSubmit={this.handleSubmit}>
                     <input type="text" placeholder='login' value={this.state.login} name='login'/>
                     <input type='password' placeholder='password' value={this.state.password} name='password'/>
                     <br/>
